@@ -1,0 +1,1334 @@
+[
+    {
+        "id": "56d22c056e151739",
+        "type": "tab",
+        "label": "Flow 10",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7640b9f4125f30c8",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "09306071826e248f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "moisture (%)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1050,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9bc0f65c321f4cd5",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "4fa0dccbbe2f813a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature (° C)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1050,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ad48a18f039ac2d0",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "4fa0dccbbe2f813a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity (%)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1030,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d74e52dfa5f86930",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nitrogen (ppm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1040,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "f025d9e551835b41",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Phosphorous (ppm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1050,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "cef1447a7e1b9847",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Potassium (ppm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1050,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "859631d20273b538",
+        "type": "ui_chart",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "09306071826e248f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1030,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd26d7e7904ec5f6",
+        "type": "ui_gauge",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "09306071826e248f",
+        "order": 2,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#0088f0"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "94312f8ce6eeadab",
+        "type": "ui_button",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "09306071826e248f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON Pump",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "topic": "Pump_Manual",
+        "topicType": "msg",
+        "x": 1500,
+        "y": 340,
+        "wires": [
+            [
+                "8dba79d9622ed898",
+                "6744fbe82fc9d9b5",
+                "1672e7f7ab15ad06",
+                "dd997f05566f0388"
+            ]
+        ]
+    },
+    {
+        "id": "6744fbe82fc9d9b5",
+        "type": "mqtt out",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "Pump_Manual",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2391391c472cc361",
+        "x": 1970,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8dba79d9622ed898",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "09306071826e248f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pump Status...",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2f4b4b4ee41ef8da",
+        "type": "ui_button",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "09306071826e248f",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF Pump",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "topic": "Pump_Manual",
+        "topicType": "msg",
+        "x": 1510,
+        "y": 420,
+        "wires": [
+            [
+                "8dba79d9622ed898",
+                "6744fbe82fc9d9b5",
+                "1672e7f7ab15ad06",
+                "660bdf5e98797ff1"
+            ]
+        ]
+    },
+    {
+        "id": "ae0129ee3ddf0674",
+        "type": "ui_chart",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "4fa0dccbbe2f813a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1010,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e59abc8db7ee22f",
+        "type": "ui_chart",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "4fa0dccbbe2f813a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1010,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd19de6959b5bcea",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "4fa0dccbbe2f813a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fan Status...",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1030,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "86d9b9dafdd5cd69",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 24",
+        "func": "let soil_moisture = msg.payload;\n\nif (soil_moisture < 60) {\n    // ดินแห้ง ต้องการน้ำ\n    msg.payload = \"ต้องการน้ำ!!!\";\n    msg.color = \"red\"; // สีแดง\n} else if (soil_moisture >= 60 && soil_moisture <= 79) {\n    // ดินปกติ น้ำเพียงพอแล้ว\n    msg.payload = \"น้ำเพียงพอแล้ว\";\n    msg.color = \"green\"; // สีเขียว\n} else if (soil_moisture > 79) {\n    // ดินเปียก น้ำมากไป\n    msg.payload = \"น้ำมากไป!!!\";\n    msg.color = \"blue\"; // สีฟ้า\n}\n\n// ส่งออกข้อความและสี\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 300,
+        "wires": [
+            [
+                "b2051ecbe428bc72"
+            ]
+        ]
+    },
+    {
+        "id": "b2051ecbe428bc72",
+        "type": "ui_template",
+        "z": "56d22c056e151739",
+        "group": "09306071826e248f",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align: center; font-size: 17.5px;\">\n    <span style=\"color: white;\">Water Level:</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;\n    <span style=\"color: {{msg.color}};\">{{msg.payload}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1240,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82437489affbe28c",
+        "type": "mqtt in",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "Pump_Status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2391391c472cc361",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1580,
+        "y": 620,
+        "wires": [
+            [
+                "8dba79d9622ed898",
+                "1672e7f7ab15ad06",
+                "43ca531e59f60013"
+            ]
+        ]
+    },
+    {
+        "id": "330cd1be761b8dcc",
+        "type": "mqtt in",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "Fan_Status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2391391c472cc361",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 800,
+        "wires": [
+            [
+                "fd19de6959b5bcea",
+                "d5043300eb07d9bf"
+            ]
+        ]
+    },
+    {
+        "id": "85f8c63537453eb8",
+        "type": "ui_button",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "38838b490f0f6a1c",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON Pump",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "topic": "Pump_Manual",
+        "topicType": "msg",
+        "x": 1520,
+        "y": 980,
+        "wires": [
+            [
+                "59705711db117df9",
+                "93c444bfc7767884",
+                "1e8267ba5712c1db",
+                "557744faa1cc9113",
+                "ef763c5ca454a568"
+            ]
+        ]
+    },
+    {
+        "id": "93c444bfc7767884",
+        "type": "mqtt out",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "Pump_Manual_NPK",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2391391c472cc361",
+        "x": 2000,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "59705711db117df9",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pump Status...",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2040,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b500b28982f7a151",
+        "type": "ui_button",
+        "z": "56d22c056e151739",
+        "name": "",
+        "group": "38838b490f0f6a1c",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF Pump",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "topic": "Pump_Manual",
+        "topicType": "msg",
+        "x": 1530,
+        "y": 1060,
+        "wires": [
+            [
+                "59705711db117df9",
+                "93c444bfc7767884",
+                "1e8267ba5712c1db",
+                "a547adc291e65dae"
+            ]
+        ]
+    },
+    {
+        "id": "dc50ec697883caa1",
+        "type": "mqtt in",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "Pumpfertilizer_Status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2391391c472cc361",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1640,
+        "y": 1140,
+        "wires": [
+            [
+                "59705711db117df9",
+                "1e8267ba5712c1db",
+                "18ce87f27065defd"
+            ]
+        ]
+    },
+    {
+        "id": "24874a47b431732f",
+        "type": "ui_text",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Plant Requirement (L)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1060,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "21db69882eb7f63d",
+        "type": "ui_template",
+        "z": "56d22c056e151739",
+        "group": "38838b490f0f6a1c",
+        "name": "",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center;\">\n    <button style=\"background-color: {{msg.payload === true ? 'green' : 'black'}}; color: white; width: 70px; height: 70px; border-radius: 50%; font-size: 20px;\">\n        {{msg.payload === true ? 'ON' : 'OFF'}}\n    </button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2100,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e8267ba5712c1db",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 25",
+        "func": "if (msg.payload === \"ON\") {\n    msg.payload = true;\n} else if (msg.payload === \"OFF\") {\n    msg.payload = false;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1220,
+        "wires": [
+            [
+                "21db69882eb7f63d"
+            ]
+        ]
+    },
+    {
+        "id": "b2a583761bee9dab",
+        "type": "ui_template",
+        "z": "56d22c056e151739",
+        "group": "09306071826e248f",
+        "name": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center;\">\n    <button style=\"background-color: {{msg.payload === true ? 'green' : 'black'}}; color: white; width: 70px; height: 70px; border-radius: 50%; font-size: 20px;\">\n        {{msg.payload === true ? 'ON' : 'OFF'}}\n    </button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2050,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1672e7f7ab15ad06",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 26",
+        "func": "if (msg.payload === \"ON\") {\n    msg.payload = true;\n} else if (msg.payload === \"OFF\") {\n    msg.payload = false;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1860,
+        "y": 520,
+        "wires": [
+            [
+                "b2a583761bee9dab"
+            ]
+        ]
+    },
+    {
+        "id": "d5043300eb07d9bf",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 27",
+        "func": "if (msg.payload === \"ON\") {\n    msg.payload = true;\n} else if (msg.payload === \"OFF\") {\n    msg.payload = false;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cec630970318a2c",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2000,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43ca531e59f60013",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 28",
+        "func": "// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"ON\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'รดน้ำเรียบร้อยแล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 11537; // Package ID ของ Sticker\n    msg.stickerId = 52002734; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 620,
+        "wires": [
+            [
+                "8cec630970318a2c"
+            ]
+        ]
+    },
+    {
+        "id": "0107128b20bd865c",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1930,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18ce87f27065defd",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 29",
+        "func": "// msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf';\n// msg.message = 'ใจเย็นลูกพี่';\n// msg.stickerPackageId = 446;\n// msg.stickerId = 1993;\n\n// msg.headers = {\n//     'content-type':'application/x-www-form-urlencoded',\n//     'Authorization':'Bearer ' + msg.token\n// };\n// msg.payload = {\n//     'message' : msg.message,\n//     'stickerPackageId' : msg.stickerPackageId,\n//     'stickerId' : msg.stickerId\n// };\n// return msg;\n\n// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"ON\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'ใส่ปุ๋ยเรียบร้อยแล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 6632; // Package ID ของ Sticker\n    msg.stickerId = 11825374; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 1280,
+        "wires": [
+            [
+                "0107128b20bd865c"
+            ]
+        ]
+    },
+    {
+        "id": "53f928ba4557bdc3",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1990,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd997f05566f0388",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 30",
+        "func": "// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"ON\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'เปิดน้ำ-รดน้ำต้นไม้แล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 6632; // Package ID ของ Sticker\n    msg.stickerId = 11825377; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 340,
+        "wires": [
+            [
+                "53f928ba4557bdc3"
+            ]
+        ]
+    },
+    {
+        "id": "db185082f9824852",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1990,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "660bdf5e98797ff1",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 31",
+        "func": "// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"OFF\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'ปิดน้ำเรียบร้อยแล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 6632; // Package ID ของ Sticker\n    msg.stickerId = 11825378; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 400,
+        "wires": [
+            [
+                "db185082f9824852"
+            ]
+        ]
+    },
+    {
+        "id": "e878e487423cfef6",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1950,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "557744faa1cc9113",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 32",
+        "func": "// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"ON\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'เปิดปั๊มให้ปุ๋ยต้นไม้แล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 6632; // Package ID ของ Sticker\n    msg.stickerId = 11825375; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 880,
+        "wires": [
+            [
+                "e878e487423cfef6"
+            ]
+        ]
+    },
+    {
+        "id": "8e540aec5ce8e713",
+        "type": "http request",
+        "z": "56d22c056e151739",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1950,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a547adc291e65dae",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 33",
+        "func": "// รับค่าจาก Input\nlet pumpStatus = msg.payload; // ค่าที่รับมาจาก Input\n\n// ตรวจสอบสถานะของ Pump\nif (pumpStatus === \"OFF\") {\n    msg.token = 'o1b440nlIccUcVBvdsOYrJH2StFtUGHenaOn4b17mvf'; // Token ของคุณ\n    msg.message = 'ปิดปั๊มใส่ปุ๋ยเรียบร้อยแล้วครับ'; // ข้อความที่ต้องการส่ง\n    msg.stickerPackageId = 6370; // Package ID ของ Sticker\n    msg.stickerId = 11088017; // ID ของ Sticker\n\n    // กำหนด Header สำหรับการส่ง Line Notify\n    msg.headers = {\n        'content-type': 'application/x-www-form-urlencoded',\n        'Authorization': 'Bearer ' + msg.token\n    };\n\n    // Payload ที่จะส่งไปยัง Line Notify\n    msg.payload = {\n        'message': msg.message,\n        'stickerPackageId': msg.stickerPackageId,\n        'stickerId': msg.stickerId\n    };\n    return msg; // ส่งผลลัพธ์\n} else {\n    // หากสถานะไม่ใช่ \"ON\" ไม่ทำอะไร\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 940,
+        "wires": [
+            [
+                "8e540aec5ce8e713"
+            ]
+        ]
+    },
+    {
+        "id": "30d41b2669ca7e09",
+        "type": "mqtt in",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "NPK_Data",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2391391c472cc361",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 980,
+        "wires": [
+            [
+                "af8363a68e6ccb35"
+            ]
+        ]
+    },
+    {
+        "id": "af8363a68e6ccb35",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 38",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Object หรือไม่\nif (typeof msg.payload === 'object' && msg.payload !== null) {\n    // แปลง Object เป็น Array โดยเก็บค่าเฉพาะ Value ของ N, P, K\n    let npkArray = [msg.payload.N, msg.payload.P, msg.payload.K, msg.payload.FertilizerUse];\n\n    // สร้างข้อความเพื่อ Debug หรือส่งต่อ\n    msg.payload = npkArray; // Array ของ [N, P, K]\n    return msg;\n} else {\n    // แจ้งข้อผิดพลาดหาก payload ไม่ใช่ Object\n    node.error(\"Payload is not an object or is null\", msg);\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 980,
+        "wires": [
+            [
+                "c7caafb50870a00b",
+                "d66581d2288dfd56",
+                "fe0db29d13089b0e",
+                "b428f55bda4ba850",
+                "a10d349ac1f37a36"
+            ]
+        ]
+    },
+    {
+        "id": "c7caafb50870a00b",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 39",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let N = msg.payload[0]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = N; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "d74e52dfa5f86930"
+            ]
+        ]
+    },
+    {
+        "id": "d66581d2288dfd56",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 40",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let P = msg.payload[1]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = P; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1000,
+        "wires": [
+            [
+                "f025d9e551835b41"
+            ]
+        ]
+    },
+    {
+        "id": "fe0db29d13089b0e",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 41",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let K = msg.payload[2]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = K; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "cef1447a7e1b9847"
+            ]
+        ]
+    },
+    {
+        "id": "8ea934174a3390e2",
+        "type": "mysql",
+        "z": "56d22c056e151739",
+        "mydb": "668a3a048f83f449",
+        "name": "VeggieVilly_Farm",
+        "x": 970,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a10d349ac1f37a36",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "Insert",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload) && msg.payload.length === 4) {\n    // ดึงค่าจาก Array (Soil_Nitrogen, Soil_Phosphorous, Soil_Potassium, Plant_Requirement)\n    let Soil_Nitrogen = msg.payload[0]; // ค่า N (Nitrogen)\n    let Soil_Phosphorous = msg.payload[1]; // ค่า P (Phosphorous)\n    let Soil_Potassium = msg.payload[2]; // ค่า K (Potassium)\n    let Plant_Requirement = msg.payload[3]; // ค่า Plant Requirement\n\n    // ตรวจสอบว่าแต่ละค่ามีชนิดเป็นตัวเลข\n    if (\n        typeof Soil_Nitrogen === 'number' &&\n        typeof Soil_Phosphorous === 'number' &&\n        typeof Soil_Potassium === 'number' &&\n        typeof Plant_Requirement === 'number'\n    ) {\n        // สร้างคำสั่ง SQL Query\n        msg.topic = `INSERT INTO veggievilly_farm.fertilizer (\\`Soil_Nitrogen(ppm)\\`, \\`Soil_Phosphorous(ppm)\\`, \\`Soil_Potassium(ppm)\\`, \\`Plant_Requirement(L)\\`) VALUES (${Soil_Nitrogen}, ${Soil_Phosphorous}, ${Soil_Potassium}, ${Plant_Requirement});`;\n        return msg; // ส่ง msg ไปยัง MySQL Node\n    } else {\n        node.error(\"One or more values are not numbers\", msg);\n        return null; // หยุดการทำงานถ้าค่าที่ส่งมาไม่ถูกต้อง\n    }\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array หรือมีขนาดไม่ถูกต้อง\n    node.error(\"Payload is not an array or does not contain exactly 4 elements\", msg);\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1260,
+        "wires": [
+            [
+                "8ea934174a3390e2"
+            ]
+        ]
+    },
+    {
+        "id": "81209756f41e48eb",
+        "type": "mqtt in",
+        "z": "56d22c056e151739",
+        "name": "",
+        "topic": "System_Data",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2391391c472cc361",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "d4b5cb196e83cc97"
+            ]
+        ]
+    },
+    {
+        "id": "d4b5cb196e83cc97",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 43",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Object หรือไม่\nif (typeof msg.payload === 'object' && msg.payload !== null) {\n    // แปลง Object เป็น Array โดยเก็บค่าเฉพาะ Value ของ N, P, K\n    let airArray = [msg.payload.SoilMoisture, msg.payload.Temperature, msg.payload.Humidity];\n\n    // สร้างข้อความเพื่อ Debug หรือส่งต่อ\n    msg.payload = airArray;\n    return msg;\n} else {\n    // แจ้งข้อผิดพลาดหาก payload ไม่ใช่ Object\n    node.error(\"Payload is not an object or is null\", msg);\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "ba62dde8b4c2d7e5",
+                "37e63a80a0d97fd5",
+                "11e90868553b5bdf",
+                "39e068ef83c5fdb6"
+            ]
+        ]
+    },
+    {
+        "id": "ba62dde8b4c2d7e5",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 44",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let SoildHumidity = msg.payload[0]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = SoildHumidity; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 400,
+        "wires": [
+            [
+                "86d9b9dafdd5cd69",
+                "dd26d7e7904ec5f6",
+                "859631d20273b538",
+                "7640b9f4125f30c8"
+            ]
+        ]
+    },
+    {
+        "id": "37e63a80a0d97fd5",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 45",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let AirTemp = msg.payload[1]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = AirTemp; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 560,
+        "wires": [
+            [
+                "9bc0f65c321f4cd5",
+                "ae0129ee3ddf0674"
+            ]
+        ]
+    },
+    {
+        "id": "11e90868553b5bdf",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 46",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let AirHumidity = msg.payload[2]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = AirHumidity; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 680,
+        "wires": [
+            [
+                "ad48a18f039ac2d0",
+                "7e59abc8db7ee22f"
+            ]
+        ]
+    },
+    {
+        "id": "30d20c5629c86725",
+        "type": "mysql",
+        "z": "56d22c056e151739",
+        "mydb": "668a3a048f83f449",
+        "name": "VeggieVilly_Farm",
+        "x": 930,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39e068ef83c5fdb6",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 47",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload) && msg.payload.length === 3) {\n    // ดึงค่าจาก Array (Soil_moisture, Air_temperature, Air_humidity)\n    let Soil_moisture = msg.payload[0]; // ค่า Soil Moisture (%)\n    let Air_temperature = msg.payload[1]; // ค่า Air Temperature (° C)\n    let Air_humidity = msg.payload[2]; // ค่า Air Humidity (%)\n\n    \n    if (typeof Soil_moisture === 'number' && typeof Air_temperature === 'number' && typeof Air_humidity === 'number') {\n\n        msg.topic = `INSERT INTO veggievilly_farm.soil_air (\\`Soil_moisture(%)\\`, \\`Air_temperature(° C)\\`, \\`Air_humidity(%)\\`) \n                    VALUES (${Soil_moisture}, ${Air_temperature}, ${Air_humidity});`;\n        return msg;\n    } else {\n        node.error(\"One or more values are not numbers\", msg);\n        return null; // หยุดการทำงานถ้าค่าที่ส่งมาไม่ถูกต้อง\n    }\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array หรือมีขนาดไม่ถูกต้อง\n    node.error(\"Payload is not an array or does not contain exactly 3 elements\", msg);\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "30d20c5629c86725"
+            ]
+        ]
+    },
+    {
+        "id": "b428f55bda4ba850",
+        "type": "function",
+        "z": "56d22c056e151739",
+        "name": "function 48",
+        "func": "// ตรวจสอบว่า msg.payload เป็น Array\nif (Array.isArray(msg.payload)) {\n    // ดึงค่า N ออกมา (ตัวแรกใน Array)\n    let FertilizerUse = msg.payload[3]; // ค่า N จะอยู่ที่ index 0\n\n    // ส่งค่า N ไปเป็น msg.payload\n    msg.payload = FertilizerUse; // ค่า N จะเป็นตัวเลข\n    return msg; // ส่งต่อไปยัง Node ถัดไป\n} else {\n    // แจ้งข้อผิดพลาดหาก msg.payload ไม่ใช่ Array\n    node.error(\"Payload is not an array\", msg);\n    return null; // หยุดการทำงาน\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1160,
+        "wires": [
+            [
+                "24874a47b431732f"
+            ]
+        ]
+    },
+    {
+        "id": "ef763c5ca454a568",
+        "type": "debug",
+        "z": "56d22c056e151739",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1660,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "09306071826e248f",
+        "type": "ui_group",
+        "name": "Soil",
+        "tab": "500a0195e6ede15c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4fa0dccbbe2f813a",
+        "type": "ui_group",
+        "name": "Air",
+        "tab": "500a0195e6ede15c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "38838b490f0f6a1c",
+        "type": "ui_group",
+        "name": "Fertilizer",
+        "tab": "500a0195e6ede15c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2391391c472cc361",
+        "type": "mqtt-broker",
+        "name": "Farm",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "668a3a048f83f449",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "localhost",
+        "port": "3306",
+        "db": "VeggieVilly_Farm",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "500a0195e6ede15c",
+        "type": "ui_tab",
+        "name": "Farm_control",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]
